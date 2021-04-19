@@ -4,10 +4,10 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './config/theme';
 
 export default () =>  {
-    return (
-        <ThemeProvider theme={ theme }>
-            <CssBaseline />
-            <Routes />
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={ theme }>
+      <CssBaseline />
+      <Routes />
+    </ThemeProvider>
+  );
 }
