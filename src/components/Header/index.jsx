@@ -27,7 +27,6 @@ export default function Header() {
           className={classes.title}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
