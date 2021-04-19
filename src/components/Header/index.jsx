@@ -22,11 +22,6 @@ export default function Header() {
           aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography 
-          variant="h6" 
-          className={classes.title}>
-            News
-          </Typography>
         </Toolbar>
       </AppBar>
     </div>
