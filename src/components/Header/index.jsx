@@ -113,12 +113,12 @@ export default function PersistentDrawerLeft() {
           </Link>
         </List>
         <List>
-        <Link to="/social-media" className={classes.link}>
-          <ListItem button key="social-media">
+        <Link to="/comments" className={classes.link}>
+          <ListItem button key="comments">
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-              <ListItemText primary="Redes Sociais" />
+              <ListItemText primary="Comentários" />
             </ListItem>
           </Link>
         </List>
