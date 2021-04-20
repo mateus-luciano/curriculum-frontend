@@ -1,8 +1,10 @@
 import { Container, Grid } from '@material-ui/core';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import useStyles from './styles';
 
 export default function Layout({ children }) {
+const classes = useStyles();
 
   return (
     <div>
@@ -11,7 +13,7 @@ export default function Layout({ children }) {
           <Header />
         </Grid>
         <Grid item xs={12}>
-          <Container>
+          <Container className={classes.main}>
             {children}
           </Container>
         </Grid>
