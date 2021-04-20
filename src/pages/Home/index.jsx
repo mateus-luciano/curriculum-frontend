@@ -6,6 +6,13 @@ import {
  } from '@material-ui/core';
 import useStyles from './styles';
 
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import MailIcon from '@material-ui/icons/Mail';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+
 export default () => {
   const classes = useStyles();
 
@@ -14,7 +21,7 @@ export default () => {
       <Grid 
         container xs={12} 
         spacing={10}
-        className={classes.red} 
+        className={classes.main} 
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -25,7 +32,7 @@ export default () => {
         >
           <Avatar 
             alt="Phone Mateus" 
-            src="/static/images/avatar/1.jpg" 
+            src="https://instagram.fccm7-1.fna.fbcdn.net/v/t51.2885-19/s150x150/83708444_2613659212178909_589697605286494208_n.jpg?tp=1&_nc_ht=instagram.fccm7-1.fna.fbcdn.net&_nc_ohc=RHKrUtPSDF4AX80HUeu&edm=ABfd0MgBAAAA&ccb=7-4&oh=29546d971439724bdb004c38941418db&oe=60A1F675&_nc_sid=7bff83" 
             className={classes.large} 
           />
         </Grid>
@@ -41,6 +48,43 @@ export default () => {
             </Typography>
           </Grid>
         </Grid>
+        <Grid 
+        container 
+        xs={12}
+        spacing={1}
+        >
+      <Grid container item xs={10} align="center">
+        <Grid item>
+          <MailIcon /> 
+        </Grid>
+        <Grid item>
+          <Typography paragraph>
+            teeusdm@gmail.com
+          </Typography>
+        </Grid>
+      </Grid>
+        <Grid container item xs={2} align="center">
+          <Grid item>
+            <WhatsAppIcon />
+          </Grid>
+          <Grid item>
+            <Typography paragraph>
+              (45) 9 9143-9141
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container item xs={12} direction="row">
+        <Grid item>
+            <MailIcon />
+          </Grid>
+          <Grid item>
+          <Typography paragraph>
+            teeusdm@icloud.com
+          </Typography> 
+          </Grid>
+        </Grid>
+      </Grid>
+      
     </Grid>
   </div>
   );

@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
   },
   green: {
     background: 'green'
+  },
+  main: {
+    border: '1px solid #000000',
+    borderRadius: '1em',
+    padding: '.5em',
   }
 }));
 
