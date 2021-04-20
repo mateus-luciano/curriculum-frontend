@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function Layout({ children }) {
   return (
@@ -14,7 +15,7 @@ export default function Layout({ children }) {
         </Container>
       </Grid>
       <Grid item xs={12}>
-        <h1>Footer</h1>
+        <Footer />
       </Grid>
     </Grid>
   );

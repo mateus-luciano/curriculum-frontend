@@ -10,12 +10,12 @@ export default () => {
   return(
     <div className={classes.root}>
       <Grid container xs={12}>
-        <Grid item>
+        <Grid item xs={12} align="center">
           <Typography>
             Curriculum - Mateus Luciano da Silva
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={12} align="center">
           <Typography>
             2021
           </Typography>
