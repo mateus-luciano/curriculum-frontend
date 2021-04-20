@@ -123,6 +123,16 @@ export default function PersistentDrawerLeft() {
           </Link>
         </List>
         <List>
+        <Link to="/informations" className={classes.link}>
+          <ListItem button key="informations">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+              <ListItemText primary="Informações" />
+            </ListItem>
+          </Link>
+        </List>
+        <List>
           <ListItem button key="contact">
             <ListItemIcon>
               <MailIcon />
