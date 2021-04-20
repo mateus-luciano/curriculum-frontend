@@ -54,11 +54,12 @@ export default () => {
         xs={12}
         spacing={1}
         >
-      <Grid container item xs={10} align="center">
+      <Grid container item xs={9} align="center">
+      <Grid item xs={1}></Grid>
         <Grid item>
           <MailIcon /> 
         </Grid>
-        <Grid item>
+        <Grid item xs={1}>
           <Typography paragraph>
             teeusdm@gmail.com
           </Typography>
@@ -74,17 +75,18 @@ export default () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container item xs={12} direction="row">
-        <Grid item>
-            <MailIcon />
-          </Grid>
+        <Grid container item xs={9} direction="row">
+          <Grid item xs={1}></Grid>
           <Grid item>
-          <Typography paragraph>
-            teeusdm@icloud.com
-          </Typography> 
+              <MailIcon />
+            </Grid>
+            <Grid item>
+            <Typography paragraph>
+              teeusdm@icloud.com
+            </Typography> 
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
       <Grid 
         container 
         xs={12} 
