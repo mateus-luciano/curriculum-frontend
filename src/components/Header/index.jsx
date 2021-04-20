@@ -81,7 +81,7 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <Divider />
-          <Typography paragraph>Mateus Luciano</Typography>
+          <Typography paragraph>Dark Mode</Typography>
         <List>
         <Link to="/" className={classes.link}>
           <ListItem button key="home">
