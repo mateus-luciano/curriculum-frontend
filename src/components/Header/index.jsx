@@ -81,23 +81,55 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <Divider />
-        <List>
           <Typography paragraph>Mateus Luciano</Typography>
+        <List>
+        <Link to="/" className={classes.link}>
+          <ListItem button key="home">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+              <ListItemText primary="Home" />
+          </ListItem>
+          </Link>
+        </List>
+        <List>
+        <Link to="/about" className={classes.link}>
           <ListItem button key="about">
             <ListItemIcon>
               <AccountCircleIcon />
             </ListItemIcon>
-            <Link to="/about" className={classes.link}>
               <ListItemText primary="Sobre" />
-            </Link>
           </ListItem>
+          </Link>
+        </List>
+        <List>
+        <Link to="/skills" className={classes.link}>
+          <ListItem button key="skills">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+              <ListItemText primary="Habilidades" />
+            </ListItem>
+          </Link>
+        </List>
+        <List>
+        <Link to="/social-media" className={classes.link}>
+          <ListItem button key="social-media">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+              <ListItemText primary="Redes Sociais" />
+            </ListItem>
+          </Link>
         </List>
         <List>
           <ListItem button key="contact">
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary="Contato" />
+              <Link to="/contact" className={classes.link}>
+                <ListItemText primary="Contato" />
+              </Link>
           </ListItem>
         </List>
         <Divider />
