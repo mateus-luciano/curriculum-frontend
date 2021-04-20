@@ -3,6 +3,7 @@ import {
   Avatar,
   Typography,
   Grid,
+  Link,
  } from '@material-ui/core';
 import useStyles from './styles';
 
@@ -84,7 +85,49 @@ export default () => {
           </Grid>
         </Grid>
       </Grid>
-      
+      <Grid 
+        container 
+        xs={12} 
+        spacing={1} 
+        justify="center"
+      >
+        <Grid item>
+          <Link 
+            href="https://www.linkedin.com/in/mateus-luciano-850ba61a4" 
+            target="_blank"
+            rel="noreferrer"
+            >
+            <LinkedInIcon style={{ fontSize: 40 }} />
+          </Link>
+        </Grid>
+        <Grid item>
+        <Link 
+            href="https://www.instagram.com/teeusdm" 
+            target="_blank"
+            rel="noreferrer"
+            >
+            <InstagramIcon style={{ fontSize: 40 }} />
+          </Link>
+        </Grid>
+        <Grid item>
+        <Link 
+            href="https://github.com/teeusdm" 
+            target="_blank"
+            rel="noreferrer"
+            >
+            <GitHubIcon style={{ fontSize: 40 }} />
+          </Link>
+        </Grid>
+        <Grid item>
+        <Link 
+            href="https://web.telegram.org/#/im?p=@teeusdm" 
+            target="_blank"
+            rel="noreferrer"
+            >
+            <TelegramIcon style={{ fontSize: 40 }} />
+          </Link>
+        </Grid>
+      </Grid>
     </Grid>
   </div>
   );
