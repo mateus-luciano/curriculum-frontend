@@ -90,9 +90,8 @@ export default () => {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="Page One" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="Comentários" href="/drafts" {...a11yProps(0)} />
+          <LinkTab label="Enviar comentário" href="/trash" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -100,9 +99,6 @@ export default () => {
       </TabPanel>
       <TabPanel value={value} index={1}>
         Page Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Page Three
       </TabPanel>
     </div>
   );
