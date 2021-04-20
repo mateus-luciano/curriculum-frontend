@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import NavTabs from '../../components/NavTabs';
+import Comment from '../../components/Comment';
 import { 
   Grid, 
   Typography,
@@ -18,8 +19,7 @@ export default () => {
     .then(response => {
       console.log(response.data.data)
       response.data.data.forEach(comment => {
-        list.push(<li>{ comment.name }</li>)
-
+        list.push(<Comment name={comment.name} comment={comment.content} />)
         setComments(list)
       })
     })
