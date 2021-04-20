@@ -9,7 +9,7 @@ import {
   AppBar } from '@material-ui/core';
   import useStyles from './styles';
 
-export default () => {
+export default (props) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -95,10 +95,10 @@ export default () => {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Page One
+        {props.tableOne}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+        {props.tableTwo}
       </TabPanel>
     </div>
   );

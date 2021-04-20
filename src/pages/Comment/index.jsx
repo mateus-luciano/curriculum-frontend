@@ -33,15 +33,15 @@ export default () => {
   
   return(
     <div>
-      <Grid container xs={12}>
-        <Grid item>
-
-          <Typography>
-            { comments }
-          </Typography>
+      <NavTabs tableOne={
+        <Grid container xs={12}>
+          <Grid item>
+            <Typography>
+              { comments }
+            </Typography>
+          </Grid>
         </Grid>
-        <NavTabs />
-      </Grid>
+      } tableTwo="Table Two" />
     </div>
   );
 }
