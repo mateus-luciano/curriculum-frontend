@@ -4,6 +4,8 @@ import { useTheme } from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import { Link } from 'react-router-dom';
+
 import { 
   Drawer,
   AppBar,
@@ -22,6 +24,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import InfoIcon from '@material-ui/icons/Info';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import useStyles from './styles';
 
@@ -79,22 +83,28 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           <Typography paragraph>Mateus Luciano</Typography>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button key="about">
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <Link to="/about" className={classes.link}>
+              <ListItemText primary="Sobre" />
+            </Link>
+          </ListItem>
+        </List>
+        <List>
+          <ListItem button key="contact">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contato" />
+          </ListItem>
         </List>
         <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <br />
+        <Typography paragraph align="center">
+          2021
+        </Typography>
       </Drawer>
       <main
         className={clsx(classes.content, {
