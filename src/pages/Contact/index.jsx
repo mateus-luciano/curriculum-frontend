@@ -1,15 +1,53 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { 
   Grid,
-  Typography,
   TextField,
-  Button
+  Button,
+  Box
 } from '@material-ui/core';
 import useStyles from './styles';
 
 export default () => {
   const classes = useStyles();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [saved, setSaved] = useState(false);
+  const [invalidData, setInvalidData] = useState(false);
+
+  async function onSave(event) {
+    event.preventDefault();
+
+    setInvalidData(false);
+    setSaved(false);
+
+    if (!name || !email || phone || message) {
+      setInvalidData(true);
+    } else {
+      await axios({
+        method: 'post',
+        url: `http://localhost:3333/contact`,
+        data: {
+          name,
+          email,
+          phone,
+          message
+        }
+      }).then(response => {
+        console.log(response.data.data)
+      })
+      .catch(error => console.log(error))
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        setSaved(true);
+    }
+  }
+
   return(
     <div className={classes.root}>
       <Grid 
@@ -20,6 +58,19 @@ export default () => {
         justify="center"
       >
         <Grid item>
+          {
+            saved 
+            ? 
+              <Box 
+                p={2} 
+                mt={2} 
+                bgcolor="green" 
+                color="primary.contrastText"
+                >
+                Enviado com sucesso
+              </Box>
+            : ''
+          }
           <form>
             <TextField 
               id="name" 
@@ -27,6 +78,9 @@ export default () => {
               type="text" 
               variant="outlined" 
               className={classes.input} 
+              value={name}
+              onChange={e => setName(e.target.value)}
+              error={invalidData}
             />
             <br/>
             <TextField 
@@ -34,7 +88,10 @@ export default () => {
               label="E-mail" 
               type="text" 
               variant="outlined" 
-              className={classes.input} 
+              className={classes.input}
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              error={invalidData}
             />
             <br/>
             <TextField 
@@ -42,7 +99,10 @@ export default () => {
               label="Telefone" 
               type="number" 
               variant="outlined" 
-              className={classes.input} 
+              className={classes.input}
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              error={invalidData}
             />
             <br/>
             <TextField 
@@ -51,13 +111,19 @@ export default () => {
               multiline
               rows={4}
               variant="outlined" 
-              className={classes.input} 
+              className={classes.input}
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+              error={invalidData}
             />
           </form>
             <Button 
               color="primary" 
               variant="contained"
-            >Enviar Contato</Button>
+              onClick={onSave}
+            >
+              Enviar Contato
+            </Button>
         </Grid>
       </Grid>
     </div>
