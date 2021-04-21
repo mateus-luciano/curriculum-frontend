@@ -4,7 +4,6 @@ import NavTabs from '../../components/NavTabs';
 import Comment from '../../components/Comment';
 import { 
   Grid, 
-  Typography,
   TextField,
   Button } from '@material-ui/core';
   import useStyles from './styles';
@@ -33,13 +32,18 @@ export default () => {
   return(
     <div>
       <NavTabs tableOne={
-        <Grid container xs={12}>
-          <Grid item>
-            <Typography>
-              { comments }
-            </Typography>
+        <div className={classes.row}>
+          { comments }
+                  {/* <Grid 
+          container 
+          xs={12} 
+          direction="row"
+        >
+          <Grid item xs={2}>
+            { comments }
           </Grid>
-        </Grid>
+        </Grid> */}
+        </div>
       } tableTwo={
         <Grid 
           container 
