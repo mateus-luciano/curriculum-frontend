@@ -26,17 +26,17 @@ export default () => {
     setInvalidData(false);
     setSaved(false);
 
-    if (!name || !email || phone || message) {
+    if (!name || !email || !phone || !message) {
       setInvalidData(true);
     } else {
       await axios({
         method: 'post',
         url: `https://backend-curriculum-mateus.herokuapp.com/contact`,
         data: {
-          name,
-          email,
-          phone,
-          message
+          name: name,
+          email: email,
+          phone: phone,
+          message: message
         }
       }).then(response => {
         console.log(response.data.data)
@@ -61,7 +61,7 @@ export default () => {
       >
         <Grid item align="flex-start">
           <Typography variant="h6">
-            Entre em contato comigo :)
+            Entre em contato comigo
           </Typography>
         </Grid>
         <Grid item>
@@ -104,7 +104,7 @@ export default () => {
             <TextField 
               id="phone" 
               label="Telefone" 
-              type="number" 
+              type="text" 
               variant="outlined" 
               className={classes.input}
               value={phone}
