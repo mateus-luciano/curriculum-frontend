@@ -15,6 +15,12 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #000000',
     borderRadius: '1em',
     padding: '.5em',
+  },
+  textMain: {
+    color: theme.palette.primary
+  },
+  span: {
+    color: '#525252'
   }
 }));
 

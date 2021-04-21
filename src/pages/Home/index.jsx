@@ -39,12 +39,19 @@ export default () => {
         </Grid>
         <Grid container item xs={8}>
           <Grid item>
-            <Typography component="h2" variant="h2">
-              Mateus Luciano da Silva
+            <Typography 
+              component="h2" 
+              variant="h2"
+              className={classes.textMain}
+            >
+              Mateus Luciano Silva
             </Typography>
           </Grid>
           <Grid item>
-            <Typography paragraph>
+            <Typography 
+              paragraph
+              className={classes.span}
+              >
               Estudante desenvolvimento web full stack
             </Typography>
           </Grid>
