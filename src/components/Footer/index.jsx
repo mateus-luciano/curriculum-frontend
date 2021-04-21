@@ -12,7 +12,7 @@ export default () => {
       <Grid container xs={12}>
         <Grid item xs={12} align="center">
           <Typography>
-            Curriculum - Mateus Luciano da Silva
+            Curriculum - Mateus Luciano Silva
           </Typography>
         </Grid>
         <Grid item xs={12} align="center">
