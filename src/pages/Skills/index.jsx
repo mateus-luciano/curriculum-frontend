@@ -2,6 +2,7 @@ import Skills from '../../components/Skills';
 import { Grid } from '@material-ui/core';
 import MailIcon from '@material-ui/icons/Mail';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import theme from '../../config/theme';
 
 export default () => {
   document.title = 'Habilidades - Curriculum Mateus Luciano Silva'
@@ -12,7 +13,12 @@ export default () => {
         <Grid item xs={12}>
           <Skills 
             title="FRONTEND" 
-            icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]}
+            icons={[ 
+              <MailIcon style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <MailIcon />, 
+              <MailIcon />, 
+              <AccountCircleIcon /> 
+            ]}
           />
           <Skills 
             title="BACKEND" 
