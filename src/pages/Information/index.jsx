@@ -5,6 +5,8 @@ import {
 } from '@material-ui/core';
 
 export default () => {
+  document.title = 'Informações - Curriculum Mateus Luciano Silva'
+
   return(
     <div>
     <NavTabs tableOne={

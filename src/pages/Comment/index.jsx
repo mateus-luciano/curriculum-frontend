@@ -7,6 +7,8 @@ import { Grid } from '@material-ui/core';
 import useStyles from './styles';
 
 export default () => {
+  document.title = 'Comentários - Curriculum Mateus Luciano Silva'
+
   const classes = useStyles();
   const [comments, setComments] = useState('');
   

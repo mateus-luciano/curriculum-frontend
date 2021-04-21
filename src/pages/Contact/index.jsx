@@ -10,6 +10,7 @@ import {
 import useStyles from './styles';
 
 export default () => {
+  document.title = 'Contato - Curriculum Mateus Luciano Silva'
   const classes = useStyles();
 
   const [name, setName] = useState('');

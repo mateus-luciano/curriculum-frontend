@@ -15,6 +15,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 export default () => {
+  document.title = 'Home - Curriculum Mateus Luciano Silva'
   const classes = useStyles();
 
   return(

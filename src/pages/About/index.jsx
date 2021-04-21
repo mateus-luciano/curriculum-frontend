@@ -5,6 +5,8 @@ import {
 import useStyles from './styles';
 
 export default () => {
+  document.title = 'Sobre - Curriculum Mateus Luciano Silva'
+
   const classes = useStyles();
   
   return(

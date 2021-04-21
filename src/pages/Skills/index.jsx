@@ -4,6 +4,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 export default () => {
+  document.title = 'Habilidades - Curriculum Mateus Luciano Silva'
+
   return(
     <div>
       <Grid container xs={12}>
