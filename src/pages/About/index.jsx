@@ -1,8 +1,6 @@
 import { 
   Grid,
   Typography,
-  Button,
-  Box
 } from '@material-ui/core';
 import useStyles from './styles';
 
