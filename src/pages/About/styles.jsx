@@ -4,6 +4,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     
   },
+  title: {
+    marginBottom: '2em'
+  },
   text: {
     textIndent: '1em'
   }

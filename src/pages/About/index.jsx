@@ -11,9 +11,18 @@ export default () => {
   
   return(
     <div className={classes.root}>
-      <Grid container xs={12}>
-        <Grid item xs={12}>
-          <Typography variant="h3">
+      <Grid 
+        container 
+        xs={12}
+      >
+        <Grid 
+          item 
+          xs={12}
+        >
+          <Typography 
+            variant="h3"
+            className={classes.title}
+          >
             Sobre
           </Typography>
         </Grid>
