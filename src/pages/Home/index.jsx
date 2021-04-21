@@ -14,6 +14,8 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import MailIcon from '@material-ui/icons/Mail';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
+import { SiGmail, SiApple } from "react-icons/si";
+
 export default () => {
   document.title = 'Home - Curriculum Mateus Luciano Silva'
   const classes = useStyles();
@@ -77,7 +79,7 @@ export default () => {
         xs={1}>
         </Grid>
         <Grid item>
-          <MailIcon /> 
+          <SiGmail style={{ fontSize: 20, marginRight: '.3em' }} /> 
         </Grid>
         <Grid 
           item 
@@ -111,7 +113,7 @@ export default () => {
         >
           <Grid item xs={1}></Grid>
           <Grid item>
-              <MailIcon />
+              <SiApple style={{ fontSize: 20, marginRight: '.3em' }} />
             </Grid>
             <Grid item>
             <Typography paragraph>

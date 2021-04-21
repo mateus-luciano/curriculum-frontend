@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import NavTabs from '../../components/NavTabs';
 import Comment from '../../components/Comment';
 import FormComment from '../../components/FormComment';
@@ -11,6 +12,13 @@ export default () => {
 
   const classes = useStyles();
   const [comments, setComments] = useState('');
+  const commensState = useSelector(state => state.comment);
+
+  const commentsList = []
+
+  commensState.forEach(comment => {
+    commentsList.push(<Comment name={comment.name} comment={comment.content} />)
+  })
   
   async function getComments() {
     const list = []
@@ -34,6 +42,7 @@ export default () => {
       <NavTabs titleOne="Comentários" tableOne={
         <div className={classes.row}>
           { comments }
+          { commentsList }
         </div>
       } titleTwo="Enviar comentário" tableTwo={
         <Grid 

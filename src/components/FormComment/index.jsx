@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { 
   TextField,
   Button,
   Box } from '@material-ui/core';
 import useStyles from './styles';
+import { add } from '../../store/modules/comment/actions';
 
 export default () => {
   const classes = useStyles();
@@ -13,6 +15,7 @@ export default () => {
   const [content, setContent] = useState('');
   const [saved, setSaved] = useState(false);
   const [invalidData, setInvalidData] = useState(false);
+  const dispatch = useDispatch();
 
   async function onSave(event) {
     event.preventDefault();
@@ -23,6 +26,15 @@ export default () => {
     if (!name || !content) {
       setInvalidData(true);
     } else {
+      dispatch(add({
+        name,
+        content,
+      }));
+
+      setName('');
+      setContent('');
+      setSaved(true);
+
       await axios({
         method: 'post',
         url: `https://backend-curriculum-mateus.herokuapp.com/comments`,
@@ -34,9 +46,6 @@ export default () => {
         console.log(response.data.data)
       })
       .catch(error => console.log(error))
-        setName('');
-        setContent('');
-        setSaved(true);
     }
   }
 
