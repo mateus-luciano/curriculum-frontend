@@ -7,7 +7,7 @@ import Contact from '../pages/Contact';
 import Comment from '../pages/Comment';
 import Skills from '../pages/Skills';
 import Information from '../pages/Information';
-import Qualitys from '../pages/Qualitys';
+import Qualities from '../pages/Qualities';
 
 export default () =>  {
 	return (
@@ -19,7 +19,7 @@ export default () =>  {
 				<Route path="/comments" component={ Comment } />
 				<Route path="/skills" component={ Skills } />
 				<Route path="/informations" component={ Information } />
-				<Route path="/qualitys" component={ Qualitys } />
+				<Route path="/qualities" component={ Qualities } />
 			</Switch>
 		</BrowserRouter>
 	);
