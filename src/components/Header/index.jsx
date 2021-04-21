@@ -81,7 +81,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
         <Link to="/" className={classes.link}>
-          <ListItem button key="home">
+          <ListItem button>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
@@ -91,7 +91,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <List>
         <Link to="/about" className={classes.link}>
-          <ListItem button key="about">
+          <ListItem button>
             <ListItemIcon>
               <AccountCircleIcon />
             </ListItemIcon>
@@ -101,7 +101,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <List>
         <Link to="/informations" className={classes.link}>
-          <ListItem button key="informations">
+          <ListItem button>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
@@ -111,7 +111,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <List>
         <Link to="/skills" className={classes.link}>
-          <ListItem button key="skills">
+          <ListItem button>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
@@ -121,7 +121,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <List>
         <Link to="/qualitys" className={classes.link}>
-          <ListItem button key="qualitys">
+          <ListItem button>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
@@ -131,7 +131,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <List>
         <Link to="/comments" className={classes.link}>
-          <ListItem button key="comments">
+          <ListItem button>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
@@ -141,7 +141,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <List>
         <Link to="/contact" className={classes.link}>
-          <ListItem button key="contact">
+          <ListItem button>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>

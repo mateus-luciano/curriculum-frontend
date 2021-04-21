@@ -2,13 +2,9 @@ import NavTabs from '../../components/NavTabs';
 import InfoComponents from '../../components/InfosComponents';
 import { 
   Grid,
-  Typography,
 } from '@material-ui/core';
-import useStyles from './styles';
 
 export default () => {
-  const classes = useStyles();
-
   return(
     <div>
     <NavTabs tableOne={

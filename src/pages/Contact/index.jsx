@@ -4,7 +4,8 @@ import {
   Grid,
   TextField,
   Button,
-  Box
+  Box,
+  Typography
 } from '@material-ui/core';
 import useStyles from './styles';
 
@@ -57,6 +58,11 @@ export default () => {
         align="center" 
         justify="center"
       >
+        <Grid item align="flex-start">
+          <Typography variant="h6">
+            Entre em contato comigo :)
+          </Typography>
+        </Grid>
         <Grid item>
           {
             saved 

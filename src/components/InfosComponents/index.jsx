@@ -8,13 +8,24 @@ export default (props) => {
 
   return(
     <div className={classes.root}>
-      <Typography variant="h4" className={classes.title}>
+      <Typography 
+        variant="h4" 
+        component="h4" 
+        className={classes.title}
+      >
         {props.title}
       </Typography>
-      <Typography variant="h6" className={classes.text}>
+      <Typography 
+        variant="h6" 
+        component="h6" 
+        className={classes.text}
+      >
         {props.text}
       </Typography>
-      <Typography paragraph className={classes.span}>
+      <Typography 
+        paragraph 
+        className={classes.span}
+      >
         {props.span}
       </Typography>
     </div>

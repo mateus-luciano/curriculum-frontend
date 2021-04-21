@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import useStyles from './styes';
 
 export default (props) => {

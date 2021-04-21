@@ -20,16 +20,16 @@ export default () => {
   return(
   <div className={classes.root}>
       <Grid 
-        container xs={12} 
+        container 
+        xs={12} 
         spacing={10}
         className={classes.main} 
         direction="row"
-        justifyContent="center"
         alignItems="center"
       >
         <Grid 
           item xs={3} 
-          spacing={10}
+          // spacing={10}
         >
           <Avatar 
             alt="Phone Mateus" 

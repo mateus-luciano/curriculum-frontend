@@ -24,7 +24,7 @@ export default () => {
             Sobre
           </Typography>
         </Grid>
-        <Grid>
+        <Grid item xs={12}>
           <Typography 
             paragraph 
             className={classes.text}

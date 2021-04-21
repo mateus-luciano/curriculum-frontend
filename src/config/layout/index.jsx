@@ -8,7 +8,7 @@ const classes = useStyles();
 
   return (
     <div>
-      <Grid container>
+      <Grid container xs={12}>
         <Grid item xs={12}>
           <Header />
         </Grid>
