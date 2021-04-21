@@ -22,9 +22,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import InfoIcon from '@material-ui/icons/Info';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import useStyles from './styles';
@@ -81,7 +79,6 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <Divider />
-          <Typography paragraph>Dark Mode</Typography>
         <List>
         <Link to="/" className={classes.link}>
           <ListItem button key="home">
@@ -143,10 +140,6 @@ export default function PersistentDrawerLeft() {
           </Link>
         </List>
         <Divider />
-        <br />
-        <Typography paragraph align="center">
-          2021
-        </Typography>
       </Drawer>
       <main
         className={clsx(classes.content, {
