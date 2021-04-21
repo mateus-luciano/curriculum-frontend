@@ -7,7 +7,7 @@ export default () => {
   return(
     <div>
       <Grid container xs={12}>
-        <Grid item>
+        <Grid item xs={12}>
           <Skills 
             title="FRONTEND" 
             icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]}
