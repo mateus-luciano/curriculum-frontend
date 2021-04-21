@@ -1,9 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  input: {
-    width: '500px',
-    margin: '1em 0'
+  root: {
+    
+  },
+  text: {
+    textIndent: '1em'
   }
 }));
 
