@@ -100,6 +100,16 @@ export default function PersistentDrawerLeft() {
           </Link>
         </List>
         <List>
+        <Link to="/informations" className={classes.link}>
+          <ListItem button key="informations">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+              <ListItemText primary="Informações" />
+            </ListItem>
+          </Link>
+        </List>
+        <List>
         <Link to="/skills" className={classes.link}>
           <ListItem button key="skills">
             <ListItemIcon>
@@ -126,16 +136,6 @@ export default function PersistentDrawerLeft() {
               <MailIcon />
             </ListItemIcon>
               <ListItemText primary="Comentários" />
-            </ListItem>
-          </Link>
-        </List>
-        <List>
-        <Link to="/informations" className={classes.link}>
-          <ListItem button key="informations">
-            <ListItemIcon>
-              <MailIcon />
-            </ListItemIcon>
-              <ListItemText primary="Informações" />
             </ListItem>
           </Link>
         </List>
