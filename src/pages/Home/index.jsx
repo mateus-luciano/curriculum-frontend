@@ -11,7 +11,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TelegramIcon from '@material-ui/icons/Telegram';
-import MailIcon from '@material-ui/icons/Mail';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 import { SiGmail, SiApple } from "react-icons/si";
@@ -97,7 +96,7 @@ export default () => {
           align="center"
         >
           <Grid item>
-            <WhatsAppIcon style={{ color: "green" }} />
+            <WhatsAppIcon style={{ color: "green", marginRight: '.1em' }} />
           </Grid>
           <Grid item>
             <Typography paragraph>
