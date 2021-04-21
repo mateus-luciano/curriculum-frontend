@@ -3,6 +3,25 @@ import { Grid } from '@material-ui/core';
 import MailIcon from '@material-ui/icons/Mail';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import theme from '../../config/theme';
+import { 
+  DiBootstrap, 
+  DiGit, 
+  DiGithubBadge,
+  DiJsBadge,
+  DiMongodb,
+  DiNpm,
+  DiNodejsSmall,
+  DiPostgresql,
+  DiReact,
+  DiSass,
+  DiWindows,
+  DiHtml5,
+  DiHeroku,
+  DiCss3,
+  DiSqllite
+ } from "react-icons/di";
+
+import { FaYarn } from "react-icons/fa";
 
 export default () => {
   document.title = 'Habilidades - Curriculum Mateus Luciano Silva'
@@ -14,31 +33,48 @@ export default () => {
           <Skills 
             title="FRONTEND" 
             icons={[ 
-              <MailIcon style={{ fontSize: 40, color: theme.palette.primary }} />, 
-              <MailIcon />, 
-              <MailIcon />, 
-              <AccountCircleIcon /> 
+              <DiJsBadge style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiHtml5 style={{ fontSize: 40, color: theme.palette.primary }} />,
+              <DiCss3 style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiReact style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiSass style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiBootstrap style={{ fontSize: 40, color: theme.palette.primary }} />, 
             ]}
           />
           <Skills 
             title="BACKEND" 
-            icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]} 
+            icons={[
+              <DiNodejsSmall style={{ fontSize: 40, color: theme.palette.primary }} />,
+            ]} 
           />
           <Skills 
             title="DATABASE" 
-            icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]} 
+            icons={[
+              <DiPostgresql style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiSqllite style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiMongodb style={{ fontSize: 40, color: theme.palette.primary }} />,
+            ]} 
           />
           <Skills 
             title="SERVER" 
-            icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]} 
+            icons={[
+              <DiWindows style={{ fontSize: 40, color: theme.palette.primary }} />, 
+              <DiHeroku style={{ fontSize: 40, color: theme.palette.primary }} />, 
+            ]} 
           />
           <Skills 
             title="VERSIONING" 
-            icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]} 
+            icons={[
+              <DiGit style={{ fontSize: 40, color: theme.palette.primary }} />,
+              <DiGithubBadge style={{ fontSize: 40, color: theme.palette.primary }} />,
+            ]} 
           />
           <Skills 
             title="PACKAGE MANAGER" 
-            icons={[ <MailIcon />, <MailIcon />, <MailIcon />, <AccountCircleIcon /> ]} 
+            icons={[ 
+              <DiNpm style={{ fontSize: 40, color: theme.palette.primary, marginRight: '.2em' }} />, 
+              <FaYarn style={{ fontSize: 40, color: theme.palette.primary }} />,
+            ]} 
           />
         </Grid> 
       </Grid>
