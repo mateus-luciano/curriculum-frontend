@@ -33,12 +33,16 @@ export default () => {
           // spacing={10}
         >
           <Avatar 
-            alt="Phone Mateus" 
+            alt="Mateus Luciano Silva" 
             src="https://instagram.fccm7-1.fna.fbcdn.net/v/t51.2885-19/s150x150/83708444_2613659212178909_589697605286494208_n.jpg?tp=1&_nc_ht=instagram.fccm7-1.fna.fbcdn.net&_nc_ohc=RHKrUtPSDF4AX80HUeu&edm=ABfd0MgBAAAA&ccb=7-4&oh=29546d971439724bdb004c38941418db&oe=60A1F675&_nc_sid=7bff83" 
             className={classes.large} 
           />
         </Grid>
-        <Grid container item xs={8}>
+        <Grid 
+          container 
+          item 
+          xs={8}
+        >
           <Grid item>
             <Typography 
               component="h2" 
@@ -62,20 +66,36 @@ export default () => {
         xs={12}
         spacing={1}
         >
-      <Grid container item xs={9} align="center">
-      <Grid item xs={1}></Grid>
+      <Grid 
+        container 
+        item 
+        xs={9} 
+        align="center"
+      >
+      <Grid 
+        item 
+        xs={1}>
+        </Grid>
         <Grid item>
           <MailIcon /> 
         </Grid>
-        <Grid item xs={1}>
+        <Grid 
+          item 
+          xs={1}
+        >
           <Typography paragraph>
             teeusdm@gmail.com
           </Typography>
         </Grid>
       </Grid>
-        <Grid container item xs={2} align="center">
+        <Grid 
+          container 
+          item 
+          xs={2} 
+          align="center"
+        >
           <Grid item>
-            <WhatsAppIcon />
+            <WhatsAppIcon style={{ color: "green" }} />
           </Grid>
           <Grid item>
             <Typography paragraph>
@@ -83,7 +103,12 @@ export default () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container item xs={9} direction="row">
+        <Grid 
+          container 
+          item 
+          xs={9} 
+          direction="row"
+        >
           <Grid item xs={1}></Grid>
           <Grid item>
               <MailIcon />
