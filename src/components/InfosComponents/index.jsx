@@ -1,17 +1,20 @@
 import { 
   Typography,
 } from '@material-ui/core';
+import useStyles from './styles';
 
 export default (props) => {
+  const classes = useStyles();
+
   return(
-    <div>
-      <Typography variant="h4">
+    <div className={classes.root}>
+      <Typography variant="h4" className={classes.title}>
         {props.title}
       </Typography>
-      <Typography variant="h6">
+      <Typography variant="h6" className={classes.text}>
         {props.text}
       </Typography>
-      <Typography paragraph>
+      <Typography paragraph className={classes.span}>
         {props.span}
       </Typography>
     </div>
