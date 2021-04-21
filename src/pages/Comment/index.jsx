@@ -14,7 +14,7 @@ export default () => {
   
   async function getComments() {
     const list = []
-    await axios.get(`http://localhost:3333/comments`)
+    await axios.get(`https://backend-curriculum-mateus.herokuapp.com/comments`)
     .then(response => {
       console.log(response.data.data)
       response.data.data.forEach(comment => {

@@ -25,7 +25,7 @@ export default () => {
     } else {
       await axios({
         method: 'post',
-        url: `http://localhost:3333/comments`,
+        url: `https://backend-curriculum-mateus.herokuapp.com/comments`,
         data: {
           name: name,
           content: content

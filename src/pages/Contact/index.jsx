@@ -31,7 +31,7 @@ export default () => {
     } else {
       await axios({
         method: 'post',
-        url: `http://localhost:3333/contact`,
+        url: `https://backend-curriculum-mateus.herokuapp.com/contact`,
         data: {
           name,
           email,
