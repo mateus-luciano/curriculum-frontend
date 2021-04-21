@@ -6,6 +6,8 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
+    borderTop: '1px solid #aaaaaa',
+    marginTop: '4em'
   },
 }));
 
