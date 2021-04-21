@@ -13,10 +13,10 @@ import useStyles from './styles';
 export default () => {
   const classes = useStyles();
   const [comments, setComments] = useState('');
-  const [name, setName] = useState('');
-  const [content, setContent] = useState('');
-  const [saved, setSaved] = useState(false);
-  const [invalidData, setInvalidData] = useState(false);
+  // const [name, setName] = useState('');
+  // const [content, setContent] = useState('');
+  // const [saved, setSaved] = useState(false);
+  // const [invalidData, setInvalidData] = useState(false);
   // const [invalidCredentials, setinvalidCredentials] = useState(false);
   
   async function getComments() {
@@ -55,31 +55,31 @@ export default () => {
   //   .catch(error => console.log(error))
   // }
 
-  async function onSave(event) {
-    event.preventDefault();
+  // async function onSave(event) {
+  //   event.preventDefault();
 
-    setInvalidData(false);
-    setSaved(false);
+  //   setInvalidData(false);
+  //   setSaved(false);
 
-    if (!name || !content) {
-      setInvalidData(true);
-    } else {
-      await axios({
-        method: 'post',
-        url: `http://localhost:3333/comments`,
-        data: {
-          name: name.value,
-          content: content.value
-        }
-      }).then(response => {
-        console.log(response.data.data)
-      })
-      .catch(error => console.log(error))
-        setName('');
-        setContent('');
-        setSaved(true);
-    }
-  }
+  //   if (!name || !content) {
+  //     setInvalidData(true);
+  //   } else {
+  //     await axios({
+  //       method: 'post',
+  //       url: `http://localhost:3333/comments`,
+  //       data: {
+  //         name: name.value,
+  //         content: content.value
+  //       }
+  //     }).then(response => {
+  //       console.log(response.data.data)
+  //     })
+  //     .catch(error => console.log(error))
+  //       setName('');
+  //       setContent('');
+  //       setSaved(true);
+  //   }
+  // }
 
   // async function sendComments() {
   //   await axios({
