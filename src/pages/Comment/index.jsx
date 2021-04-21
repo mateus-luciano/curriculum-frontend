@@ -29,11 +29,11 @@ export default () => {
   
   return(
     <div>
-      <NavTabs tableOne={
+      <NavTabs titleOne="Comentários" tableOne={
         <div className={classes.row}>
           { comments }
         </div>
-      } tableTwo={
+      } titleTwo="Enviar comentário" tableTwo={
         <Grid 
           container 
           xs={12}

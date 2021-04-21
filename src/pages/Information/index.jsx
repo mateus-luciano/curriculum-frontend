@@ -36,7 +36,7 @@ export default () => {
           </Grid>
         </Grid>
       </div>
-    } tableTwo={
+    } titleOne="Formação" tableTwo={
       <div>
         <Grid 
           container
@@ -56,7 +56,8 @@ export default () => {
           </Grid>
         </Grid>
       </div>
-    } 
+    }
+    titleTwo="Experiência" 
   />
   </div>
   );

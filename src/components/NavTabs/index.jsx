@@ -89,8 +89,8 @@ export default (props) => {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab label="Comentários" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Enviar comentário" href="/trash" {...a11yProps(1)} />
+          <LinkTab label={props.titleOne} {...a11yProps(0)} />
+          <LinkTab label={props.titleTwo} {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
