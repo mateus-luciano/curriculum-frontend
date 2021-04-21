@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     
   },
   title: {
-    marginBottom: '2em'
+    marginBottom: '.6em'
   },
   text: {
     textIndent: '1em'
