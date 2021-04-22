@@ -59,6 +59,7 @@ export default () => {
         mt={2} 
         bgcolor="green" 
         color="primary.contrastText"
+        className={classes.success}
         >
         Salvo com sucesso
       </Box>
