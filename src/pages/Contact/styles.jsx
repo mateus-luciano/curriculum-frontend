@@ -4,6 +4,10 @@ const useStyles = makeStyles((theme) => ({
   input: {
     width: '500px',
     margin: '1em 0'
+  },
+  success: {
+    borderRadius: '.6em',
+    marginBottom: '.6em'
   }
 }));
 

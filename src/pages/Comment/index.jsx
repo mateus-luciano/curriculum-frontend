@@ -7,6 +7,8 @@ import FormComment from '../../components/FormComment';
 import { Grid } from '@material-ui/core';
 import useStyles from './styles';
 
+import Comments from '../../components/Comments';
+
 export default () => {
   document.title = 'Comentários - Curriculum Mateus Luciano Silva'
 
@@ -42,8 +44,9 @@ export default () => {
       <NavTabs titleOne="Comentários" tableOne={
         <div className={classes.row}>
           { comments }
-          { commentsList }
+          {/* { commentsList } */}
         </div>
+        // <Comments />
       } titleTwo="Enviar comentário" tableTwo={
         <Grid 
           container 

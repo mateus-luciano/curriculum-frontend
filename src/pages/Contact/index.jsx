@@ -11,6 +11,7 @@ import useStyles from './styles';
 
 export default () => {
   document.title = 'Contato - Curriculum Mateus Luciano Silva'
+  
   const classes = useStyles();
 
   const [name, setName] = useState('');
@@ -59,11 +60,6 @@ export default () => {
         align="center" 
         justify="center"
       >
-        <Grid item align="flex-start">
-          <Typography variant="h6">
-            Entre em contato comigo
-          </Typography>
-        </Grid>
         <Grid item>
           {
             saved 
@@ -73,11 +69,17 @@ export default () => {
                 mt={2} 
                 bgcolor="green" 
                 color="primary.contrastText"
+                className={classes.success}
                 >
                 Enviado com sucesso
               </Box>
             : ''
           }
+          <Grid item align="flex-start">
+            <Typography variant="h6">
+              Entre em contato comigo
+            </Typography>
+          </Grid>
           <form>
             <TextField 
               id="name" 
