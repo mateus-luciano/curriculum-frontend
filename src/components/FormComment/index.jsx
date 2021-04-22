@@ -32,7 +32,6 @@ export default () => {
           content: content
         }
       }).then(response => {
-        console.log(response.data.data)
       })
       .catch(error => console.log(error))
       setName('');

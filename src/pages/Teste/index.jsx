@@ -48,7 +48,6 @@ export default () => {
           content: content
         }
       }).then(response => {
-        console.log(response.data.data)
         getComments()
       })
       .catch(error => console.log(error))

@@ -24,7 +24,6 @@ export default () => {
     const list = []
     await axios.get(`https://backend-curriculum-mateus.herokuapp.com/comments`)
     .then(response => {
-      console.log(response.data.data)
       response.data.data.forEach(comment => {
         list.push(<Comment name={comment.name} comment={comment.content} />)
         setComments(list)
