@@ -5,9 +5,7 @@ import {
   Grid, 
   TextField,
   Button,
-  Box } from '@material-ui/core';
-
-import { add } from '../../store/modules/comment/actions';
+  Box } from '@material-ui/core'; 
 
 export default () => {
   document.title = 'Comentários - Curriculum Mateus Luciano Silva'
