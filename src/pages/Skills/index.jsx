@@ -1,7 +1,5 @@
 import Skills from '../../components/Skills';
 import { Grid } from '@material-ui/core';
-import MailIcon from '@material-ui/icons/Mail';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import theme from '../../config/theme';
 import { 
   DiBootstrap, 

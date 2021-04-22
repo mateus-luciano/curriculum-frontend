@@ -7,8 +7,6 @@ import FormComment from '../../components/FormComment';
 import { Grid } from '@material-ui/core';
 import useStyles from './styles';
 
-import Comments from '../../components/Comments';
-
 export default () => {
   document.title = 'Comentários - Curriculum Mateus Luciano Silva'
 

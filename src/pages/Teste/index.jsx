@@ -1,19 +1,35 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Comment from '../../components/Comment';
 import { 
+  Grid, 
   TextField,
   Button,
-  Box
- } from '@material-ui/core';
-import useStyles from './styles';
+  Box } from '@material-ui/core';
+
+import { add } from '../../store/modules/comment/actions';
 
 export default () => {
-  const classes = useStyles();
+  document.title = 'Comentários - Curriculum Mateus Luciano Silva'
 
+  const [comments, setComments] = useState('');
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
   const [saved, setSaved] = useState(false);
   const [invalidData, setInvalidData] = useState(false);
+
+  async function getComments() {
+    const list = []
+    await axios.get(`https://backend-curriculum-mateus.herokuapp.com/comments`)
+    .then(response => {
+      console.log(response.data.data)
+      response.data.data.forEach(comment => {
+        list.push(<Comment name={comment.name} comment={comment.content} />)
+        setComments(list)
+      })
+    })
+    .catch(error => console.log(error))
+  }
 
   async function onSave(event) {
     event.preventDefault();
@@ -33,6 +49,7 @@ export default () => {
         }
       }).then(response => {
         console.log(response.data.data)
+        getComments()
       })
       .catch(error => console.log(error))
       setName('');
@@ -41,8 +58,26 @@ export default () => {
     }
   }
 
+  useEffect(() => {
+    getComments()
+  }, [])
+  
   return(
     <div>
+      <Grid container xs={12}>
+        <Grid item xs={12}>
+          <h1>Comentarios</h1>
+        </Grid>
+        <Grid item xs={12}>
+          
+        </Grid>
+        <Grid item xs={12}></Grid>
+      </Grid>
+      <Grid container xs={12}>
+        <Grid item xs={12}></Grid>
+        <Grid item xs={12}></Grid>
+        <Grid item xs={12}></Grid>
+      </Grid>
     {
     saved 
     ? 
@@ -51,7 +86,6 @@ export default () => {
         mt={2} 
         bgcolor="green" 
         color="primary.contrastText"
-        className={classes.success}
         >
         Salvo com sucesso
       </Box>
@@ -63,7 +97,6 @@ export default () => {
         label="Nome" 
         type="text" 
         variant="outlined" 
-        className={classes.input} 
         value={name}
         onChange={e => setName(e.target.value)}
         error={invalidData}
@@ -75,7 +108,6 @@ export default () => {
         multiline
         rows={4}
         variant="outlined" 
-        className={classes.input}
         value={content}
         onChange={e => setContent(e.target.value)}
         error={invalidData}
@@ -91,4 +123,4 @@ export default () => {
       </Button>
     </div>
   );
-}
+} 

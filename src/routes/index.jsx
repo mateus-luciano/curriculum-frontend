@@ -8,6 +8,7 @@ import Comment from '../pages/Comment';
 import Skills from '../pages/Skills';
 import Information from '../pages/Information';
 import Qualities from '../pages/Qualities';
+import Teste from '../pages/Teste';
 
 export default () =>  {
 	return (
@@ -20,6 +21,7 @@ export default () =>  {
 				<Route path="/skills" component={ Skills } />
 				<Route path="/informations" component={ Information } />
 				<Route path="/qualities" component={ Qualities } />
+				<Route path="/test" component={ Teste } />
 			</Switch>
 		</BrowserRouter>
 	);

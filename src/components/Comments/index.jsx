@@ -5,13 +5,6 @@ import Comment from '../Comment';
 
 export default () => {
   const [comments, setComments] = useState('');
-  const commensState = useSelector(state => state.comment);
-
-  const commentsList = []
-
-  commensState.forEach(comment => {
-    commentsList.push(<Comment name={comment.name} comment={comment.content} />)
-  })
   
   async function getComments() {
     const list = []
@@ -28,7 +21,7 @@ export default () => {
 
   useEffect(() => {
     getComments()
-  }, [comments])
+  }, [])
   
   return(
     <div>
