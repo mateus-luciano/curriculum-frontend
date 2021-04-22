@@ -76,8 +76,8 @@ export default () => {
             : ''
           }
           <Grid item align="flex-start">
-            <Typography variant="h6">
-              Entre em contato comigo
+            <Typography variant="h4">
+              Contato
             </Typography>
           </Grid>
           <form>

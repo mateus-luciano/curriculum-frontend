@@ -68,58 +68,61 @@ export default () => {
           <h1>Comentarios</h1>
         </Grid>
         <Grid item xs={12}>
-          
+          {comments}
         </Grid>
         <Grid item xs={12}></Grid>
       </Grid>
       <Grid container xs={12}>
-        <Grid item xs={12}></Grid>
-        <Grid item xs={12}></Grid>
+        <Grid item xs={12}>
+          <h1>Send comentario</h1>
+        </Grid>
+        <Grid item xs={12}>
+        {
+        saved 
+        ? 
+          <Box 
+            p={2} 
+            mt={2} 
+            bgcolor="green" 
+            color="primary.contrastText"
+            >
+            Salvo com sucesso
+          </Box>
+        : ''
+      }
+        <form>
+          <TextField 
+            id="name" 
+            label="Nome" 
+            type="text" 
+            variant="outlined" 
+            value={name}
+            onChange={e => setName(e.target.value)}
+            error={invalidData}
+          />
+          <br />
+          <TextField 
+            id="comment" 
+            label="Comentário" 
+            multiline
+            rows={4}
+            variant="outlined" 
+            value={content}
+            onChange={e => setContent(e.target.value)}
+            error={invalidData}
+          /> 
+        </form>
+          <Button 
+            type="submit"
+            color="primary" 
+            variant="contained"
+            onClick={onSave}
+          >
+            Enviar Comentário
+          </Button>
+        </Grid>
         <Grid item xs={12}></Grid>
       </Grid>
-    {
-    saved 
-    ? 
-      <Box 
-        p={2} 
-        mt={2} 
-        bgcolor="green" 
-        color="primary.contrastText"
-        >
-        Salvo com sucesso
-      </Box>
-    : ''
-  }
-    <form>
-      <TextField 
-        id="name" 
-        label="Nome" 
-        type="text" 
-        variant="outlined" 
-        value={name}
-        onChange={e => setName(e.target.value)}
-        error={invalidData}
-      />
-      <br />
-      <TextField 
-        id="comment" 
-        label="Comentário" 
-        multiline
-        rows={4}
-        variant="outlined" 
-        value={content}
-        onChange={e => setContent(e.target.value)}
-        error={invalidData}
-      /> 
-    </form>
-      <Button 
-        type="submit"
-        color="primary" 
-        variant="contained"
-        onClick={onSave}
-      >
-        Enviar Comentário
-      </Button>
     </div>
   );
 } 
