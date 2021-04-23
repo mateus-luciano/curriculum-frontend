@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { 
   TextField,
@@ -6,6 +5,7 @@ import {
   Box
  } from '@material-ui/core';
 import useStyles from './styles';
+import api from '../../services/api';
 
 export default () => {
   const classes = useStyles();
@@ -24,26 +24,25 @@ export default () => {
     if (!name || !content) {
       setInvalidData(true);
     } else {
-      await axios({
-        method: 'post',
-        url: `https://backend-curriculum-mateus.herokuapp.com/comments`,
-        data: {
-          name: name,
-          content: content
-        }
-      }).then(response => {
-      })
-      .catch(error => console.log(error))
+      await api.sendComment(name, content);
       setName('');
       setContent('');
       setSaved(true);
     }
   }
 
+  async function showComments() {
+    const response = await api.getComments();
+
+    return response;
+  }
+
+  showComments()
+  
   return(
     <div>
     {
-    saved 
+    saved
     ? 
       <Box 
         p={2} 

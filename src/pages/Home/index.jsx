@@ -31,12 +31,10 @@ export default () => {
       >
         <Grid 
           item xs={3} 
-          // spacing={10}
         >
           <Avatar 
             alt="Mateus Luciano Silva" 
             src="https://media-exp1.licdn.com/dms/image/C4D03AQE7fRT0DAh_0A/profile-displayphoto-shrink_800_800/0/1604012013281?e=1624492800&v=beta&t=vKrvcQJdE933CHHfn8pdycqtr4xnFR4QN8gm708gEdQ"
-            // src="https://instagram.fccm7-1.fna.fbcdn.net/v/t51.2885-19/s150x150/83708444_2613659212178909_589697605286494208_n.jpg?tp=1&_nc_ht=instagram.fccm7-1.fna.fbcdn.net&_nc_ohc=RHKrUtPSDF4AX80HUeu&edm=ABfd0MgBAAAA&ccb=7-4&oh=29546d971439724bdb004c38941418db&oe=60A1F675&_nc_sid=7bff83" 
             className={classes.large} 
           />
         </Grid>

@@ -7,25 +7,15 @@ export default createMuiTheme(
     palette: {
       primary: {
         main: '#101522'
-        // main: '#002ab6',
-        // light: '#e99a72',
-        // dark: '#f15b0f'
       },
     background: {
       default: '#f0f0f7',
     }
   },
-  typography: {
-    fontFamily: 'Roboto',
-    fontSize: 16,
-  },
-  overrides: {
-    MuiButton: {
-        outlined: {
-          borderRadius: 30,
-        }
-      }
-    }
+    typography: {
+      fontFamily: 'Roboto',
+      fontSize: 16,
+    },
   },
   ptBR
 );

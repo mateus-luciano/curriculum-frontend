@@ -1,11 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useTheme } from '@material-ui/core/styles';
-
-import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Link } from 'react-router-dom';
 
+import { useTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { 
   Drawer,
   AppBar,
@@ -18,6 +17,7 @@ import {
   ListItemIcon,
   ListItemText
 } from '@material-ui/core';
+
 import { BsInfoSquare } from "react-icons/bs";
 import { HiOutlineHome } from "react-icons/hi";
 import { SiAboutDotMe } from "react-icons/si";
